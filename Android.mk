@@ -214,6 +214,11 @@ LOCAL_C_INCLUDES := $(LOCAL_C_INCLUDES) \
 
 LOCAL_CFLAGS += -DWEBKIT_IMPLEMENTATION=1
 
+# Utilize Link Time Optimization
+LOCAL_CFLAGS += \
+	-flto \
+	-fno-toplevel-reorder
+
 # Needed for ANGLE
 LOCAL_C_INCLUDES := $(LOCAL_C_INCLUDES) \
 	$(SOURCE_PATH)/ThirdParty/ANGLE/include/GLSLANG
